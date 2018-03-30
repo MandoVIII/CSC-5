@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int main()
+
+{
+	int num_of_days ;
+	cout << "   Day     Total Pay        " << endl;
+	cout << "____________________________" << endl;
+	
+	while ()
+	{
+		cout << setw(4) << num_of_days << " ";
+		cout << setw(7) << "$";
+		cout << setw(8) << *2 << " " << endl;
+		num_of_days = *2; 
+			
+	}	
+	
+	
+}
