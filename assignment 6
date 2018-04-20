@@ -11,7 +11,13 @@ void kineticEnergy(float KE, float m, int v);
 //main function here
 int main()
 {	
-	cin >> 
+	cout << "Please enter the falling time of the object :" << endl;
+	fallingDistance(t);
+		
 	
 	return 0;
 }
+
+void fallingDistance( float d, int t)
+{
+	cin >> t >> endl;
