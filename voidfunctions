@@ -1,0 +1,192 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+void fallingDistance(double tme );
+
+void kineticEnergy(double mass, double velocity );
+
+void gravitationalForce(double m1, double m2, double dist);
+
+ 
+int main()
+{
+    double fallingTime = 0;
+    double mass = 0;
+    double velocity = 0;
+    double m1 = 0;
+    double m2 = 0;
+    double dist = 0;
+    bool var = false;
+    
+    while ( var == false)
+    {
+	
+    cout << "Please enter the falling time of the object :" << endl;
+    cin >> fallingTime;
+    
+    if(fallingTime <0)
+    {
+    	cout << "Please enter a positive value!" << endl;
+    	cout << endl;
+	}
+	else
+	{
+		var = true;
+	} 
+	}
+	var = false;
+	
+	while (var == false)
+	{
+		
+    cout << "Please enter the mass: " <<endl;
+    cin >> mass;
+    
+	if(mass <0)
+    {
+    	cout << "Please enter a positive value!" << endl;
+    	cout << endl;
+	}
+	else
+	{
+		var = true;
+	}
+	}
+	var = false;
+	
+	while( var == false)
+	{
+    
+    cout << "Please enter the velocity: " << endl;
+    cin >> velocity;
+    
+    if(velocity <0)
+    {
+    	cout << "Please enter a positive value!" << endl;
+    	cout << endl;
+	}
+	else
+	{
+		var = true;
+	}
+	}
+	var=false;
+    
+    while( var == false)
+    {
+	
+	cout << "Please enter mass of object #1: " << endl;
+    cin >> m1;
+    
+    if(m1 <0)
+    {
+    	cout << "Please enter a positive value!" << endl;
+    	cout << endl;
+	}
+	else
+	{
+		var = true;
+	}
+	}
+	var=false;
+    
+    while( var == false)
+	{
+	
+	cout << "Please enter mass of object #2: " << endl;
+    cin >> m2;
+    
+    if(m2 <0)
+    {
+    	cout << "Please enter a positive value!" << endl;
+    	cout << endl;
+	}
+	else
+	{
+		var = true;
+	}
+	}
+	var=false;
+    
+    while( var == false)
+    {    
+	cout << "Please enter the distance between these two objects: " <<endl;
+    cin >> dist;
+   
+    if(dist <0)
+    {
+    	cout << "Please enter a positive value!" << endl;
+    	cout << endl;
+	}
+	else
+	{
+		var = true;
+	}
+	}
+	var=false;
+    
+    cout <<endl;
+    cout << "---------------------------------------------------" <<endl;;
+    
+	gravitationalForce(m1, m2, dist);
+
+    fallingDistance(fallingTime);
+    
+    kineticEnergy(mass, velocity);    
+    
+    
+    return 0;
+}
+
+void gravitationalForce(double m1, double m2, double dist)
+{
+    float G = 6.63e-11;
+    float num = 0;
+    float output = 0;
+    
+    num = G * m1 * m2;
+    dist = dist * dist;
+    
+    output = num / dist;
+    
+    cout << "The gravitational Force is: " <<endl;
+    cout << output << endl;
+    cout << endl;
+    
+   
+    
+}
+
+void fallingDistance(double tme)
+{
+    double distance = 0;
+    double tmp = 0;
+    
+    tmp = 0.5 * 9.8;
+   
+    
+    distance = (tmp * pow(tme, 2));
+    
+    cout << "Distance traveled in the amount of time provided is: " <<endl;
+    cout << fixed << setprecision(4) << distance << " Meters" << endl;
+    cout << endl;
+}
+
+void kineticEnergy(double mass, double velocity )
+{
+    double KE = 0;
+    double tmp = 0;
+    
+    tmp = 0.5 * mass;
+    
+    KE = tmp * pow(velocity, 2);
+    
+    cout << "Moving object's Kinetic Energy is: " <<endl;
+    cout << KE  << " Joules"<< endl;
+    cout << endl;
+    
+    
+}
